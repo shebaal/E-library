@@ -1,9 +1,20 @@
 :root {
     --bg-color: #f9fafc ;
     --text-color:#333;
+    --beige-color: rgb(230, 230, 230);
+    --gray-color: #8492a6;
+    --light-gray: #eff2f7;
+    --white-color: #fff;
+    --bluish-gray: rgb(211, 220, 235);
+    --dark-grey: #333;
+    --border-color: #484848;
+    --red-color: #d4070e;
+    --blue-color: #2875c3;
+    ---gray-line-color: #444;
+    --footer-title: #a6a6a6;
   }
 
-
+  @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap");
 
 *{
     padding: 0;
@@ -99,60 +110,74 @@ border-bottom: 1px solid #e5e9f2;
     
 border-right: 1px solid #e5e9f2;
    }
+   /* model */
    
- .modal-target {
-    width: 300px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+h1 {
+    margin-top: 12px;
+    bottom: 0;
   }
-  
-  .modal-target:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+          display: none;
+          /* Hidden by default */
+          position: fixed;
+          z-index: 1;
+          padding-top: 20px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(0, 0, 0);
+          background-color: rgba(0, 0, 0, 0.4);
+      }
+  
+      
+      .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 600px;
+      }
+  
+      
+      .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+      }
+  
+  i {
+      /* border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px; */
   }
   
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    opacity: 1 !important;
-    max-width: 1200px;
+  .right {
+      /* transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg); */
   }
   
-  /* Caption of Modal Image */
-  .modal-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 1200px;
-    text-align: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1em;
-    margin-top: 32px;
+  .left {
+      /* transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg); */
   }
   
-  /* Add Animation */
-  .modal-content, .modal-caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+  .noScroll { 
+    overflow: hidden;
   }
+  
+  /*end model  */
 /* end nav */
 /* start nav2 */
 .Secondnavbar{
@@ -275,7 +300,7 @@ border: 1px solid #e5e9f2;
     width: -moz-available;
 }
 
-button {
+.mybutton {
     border-radius: 12px;
     border: none;
     color: #3c4858;
@@ -283,6 +308,11 @@ button {
     float: left;
     padding: 12px;
     margin-top: 12px;
+}
+.myBtn{
+
+border: none;
+background: none;
 }
 .social{
     margin-top: 12px;
@@ -335,3 +365,127 @@ button {
     }
     
 }
+
+
+
+/* login and sign up */
+.login-signup {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* padding: 5rem 0; */
+  }
+  /* login */
+  .login {
+    width: 40%;
+  }
+  .signup {
+    width: 400px;
+  }
+  
+  .login-title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--dark-grey);
+    border-bottom: 1px solid #dddbdb;
+  }
+  
+  .login-form,
+  .signup-form {
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  .login-signup input {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 11px;
+    padding: 13px 10px;
+    background-color: var(--light-gray);
+    outline: none;
+    border: none;
+  }
+  .login-signup label {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 29;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+  }
+  
+  .login-signup button {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .go-to-signup {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .go-to-signup p {
+    margin-bottom: 1.5rem;
+  }
+  .go-to-signup .new-account-button {
+    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%), 0 3px 3px -2px rgb(0 0 0 / 12%),
+      0 3px 4px 0 rgb(0 0 0 / 14%);
+    padding: 10px 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .forget {
+    color: var(--blue-color);
+    font-size: 1rem;
+    position: absolute;
+    bottom: 20px;
+    left: -9px;
+  }
+  
+  /* sign up */
+  .two-input {
+    display: flex;
+  }
+  .two-input .input-wrap:first-child {
+    margin-left: 0.2rem;
+  }
+  .signup button {
+    background-color: var(--light-gray);
+    color: var(--gray-color);
+  }
+  .signup p {
+    color: var(--gray-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .checkbox-div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+  }
+  .checkbox-div input {
+    margin: 0;
+    margin-left: 1rem;
+    background-color: red;
+  
+    padding: 1rem;
+    width: auto;
+  }
+  /* end login */
