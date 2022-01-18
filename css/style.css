@@ -30,19 +30,9 @@ a {
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 768px) {
-   .menu {  
-     
-    content-visibility: hidden;
-    position: absolute;
-    background-color: var(--bg-color);
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 16px 0;
-   }
-    .icons{
-        width: 20px;
-    }
+   
+
+    
    .menu li:hover {
     display: inline-block;
     transition: 0.3s ease;
@@ -110,7 +100,107 @@ border-bottom: 1px solid #e5e9f2;
 border-right: 1px solid #e5e9f2;
    }
    
+ .modal-target {
+    width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .modal-target:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    opacity: 1 !important;
+    max-width: 1200px;
+  }
+  
+  /* Caption of Modal Image */
+  .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 32px;
+  }
+  
+  /* Add Animation */
+  .modal-content, .modal-caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
 /* end nav */
+/* start nav2 */
+.Secondnavbar{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 12px;
+    margin-left: 100px;
+margin-right: 100px;
+}
+.Secondnavbar img{
+  flex:1
+}
+ .search{
+     flex:2;
+     margin-left: 12px;
+     margin-right: 12px;
+    background-color:var(--bg-color);
+    border:1px var(--bg-color);
+    border-radius: 25px;
+   
+  }
+  .search input{
+    
+    background-color:var(--bg-color);
+    border:1px var(--bg-color);
+    border-radius: 12px;
+  width:93%;
+    padding: 12px;
+  }
+  .search img{
+      padding-top: 10px;
+  }
+  .logo1{
+      
+  }
+  .cart img{
+      background-color: var(--bg-color);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+  }
+  
+/* end nav2 */
+
+
+
 /* header2 */
 .navigation{
   display: flex;
@@ -129,3 +219,119 @@ border: 1px solid #e5e9f2;
 }
 
 /* End header */
+
+
+
+
+/* footer */
+.myfooter {
+    background-color: #333;
+    justify-content: space-between;
+    padding: 20px;
+    direction: rtl;
+    display: flex;
+}
+
+.myfooter p {
+    color: #a6a6a6;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.myfooter ul {
+    list-style: none;
+    color: #fff;
+}
+
+.myfooter li {
+    line-height: 2;
+}
+
+.form {
+    background-color: #484848;
+
+    border-radius: 5px;
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+.contact{
+ 
+    display: block ruby;
+}
+
+.form input {
+    font-size: 16px;
+    line-height: 2.86;
+    padding: 0 16px;
+    background: #eff2f7;
+    resize: none;
+    border-radius: 4px;
+    border: none;
+    width: -moz-available;
+}
+
+button {
+    border-radius: 12px;
+    border: none;
+    color: #3c4858;
+    background: #fff;
+    float: left;
+    padding: 12px;
+    margin-top: 12px;
+}
+.social{
+    margin-top: 12px;
+}
+.makeflex{
+    display: flex;
+    padding:12px;
+    justify-content: space-around;
+}
+.lastText{
+    text-align: left;
+}
+/* end footer */
+
+
+
+ 
+@media (max-width: 768px) {
+    .myfooter {
+        background-color: #333;
+        justify-content: space-between;
+        padding: 20px;
+        direction: rtl;
+        display: block;
+    }
+    .menu {  
+        content-visibility:hidden;
+        position: absolute;
+        background-color: var(--bg-color);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+       }
+       .search img{
+        padding-top: 5px;
+    }
+    .search input{
+    
+        background-color:var(--bg-color);
+        border:1px var(--bg-color);
+        border-radius: 12px;
+      width:88%;
+        padding: 10px;
+      }
+      .makeflex{
+          padding:12px;
+        display: block;
+        justify-content: space-between;
+    }
+    
+}
