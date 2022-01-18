@@ -31,7 +31,8 @@
             <!-- NAVIGATION MENUS -->
 
             <div class="menu">
-                <li><span><img src="icons/person.svg" /> </span><a href="/"> ادخل لحسابك أو سجل الآن </a>
+                <li><span><img src="icons/person.svg" /> </span><a><button class="myBtn"> ادخل لحسابك </button>أو<button
+                            class="myBtn"> سجل الآن </button></a>
                 </li>
                 <li><span><img src="icons/star.svg" class="icons" /> </span><a href="/"> المفضلة </a></li>
                 <li><span><img src="icons/ship.svg" class="icons" /> </span><a href="/"> تتبع الشحنة </a></li>
@@ -64,22 +65,128 @@
         </div>
     </nav>
 
- 
+
 
 
     <body>
 
+        <!-- Start Body -->
+        <!-- End Body -->
+
+
+
+        <div class="modal">
+            <div class="modal-content">
+
+                <span class="close close">×</span>
+
+                <p><i class="arrow left"></i></p>
+                <section dir="rtl" class="login-signup">
+                    <div class="right login">
+                        <h1 class="login-title">تسجيل الدخول</h1>
+                        <form id="login-form" class="login-form">
+                            <div class="input-wrap">
+                                <input name="email" type="email" title="البريد الالكتروني أو رقم الجوال" />
+                                <label for="name">البريد الالكتروني أو رقم الجوال</label>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="password">كلمة السر</label>
+                                <input type="password" name="password" />
+                                <p class="forget">نسيت؟</p>
+                            </div>
+                            <button>تسجيل الدخول</button>
+                        </form>
+
+                        <div class="go-to-signup">
+                            <p>ليس لديك حساب؟</p>
+                            <p class="new-account-button">انشاء حساب جديد</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <p><i class="arrow right"></i></p>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <p><i class="arrow left"></i></p>
+                <span class="close close">×</span>
+
+                <section dir="rtl" class="login-signup">
+
+                    <div class="left signup">
+                        <h1 class="login-title">إنشاء حساب</h1>
+                        <form id="signup-form" class="signup-form">
+                            <div class="two-input">
+                                <div class="input-wrap">
+                                    <input name="number" type="tel" />
+                                    <label for="name">رقم الجوال</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="">رمز البلد</label>
+                                    <input type="password" name="password" />
+                                </div>
+                            </div>
+                            <p>سوف نرسل لك رمز التحقق عن طريق رسالة نصية</p>
+
+                            <div class="input-wrap">
+                                <label for="password">ارسال رمز التحقق</label>
+                                <input type="password" name="password" />
+                            </div>
+
+                            <div class="input-wrap">
+                                <label for="password">الاسم الاول</label>
+                                <input type="password" name="password" />
+                            </div>
+
+                            <div class="input-wrap">
+                                <label for="password">اسم العائله</label>
+                                <input type="password" name="password" />
+                            </div>
+
+                            <div class="input-wrap">
+                                <label for="password">البريد الالكتروني</label>
+                                <input type="password" name="password" />
+                            </div>
+
+                            <div class="input-wrap">
+                                <label for="password">تاكيد البريد الالكتروني</label>
+                                <input type="password" name="password" />
+                            </div>
+                            <div class="input-wrap">
+                                <label for="password">كلمة السر</label>
+                                <input type="password" name="password" />
+                            </div>
+
+                            <div class="checkbox-div">
+                                <span></span>
+                                <input type="checkbox"  />
+                                <p>أوافق على الشروط والأحكام</p>
+                            </div>
+                            <div class="checkbox-div">
+                                <span></span>
+
+                                <input type="checkbox" disabled="disabled" />
+                                <p>التسجيل للانضمام للنشرة البريدية</p>
+                            </div>
+
+                            <button>انشاء حساب</button>
+                        </form>
+                    </div>
+                </section>
+                <p><i class="arrow right"></i></p>
+            </div>
+
+        </div>
 
 
 
 
 
-        <!-- The Modal -->
-        <!-- <div id="modal" class="modal">
-    <span id="modal-close" class="modal-close">&times;</span>
-    <img id="modal-content" class="modal-content">
-    <div id="modal-caption" class="modal-caption"></div>
-  </div> -->
+
+
 
         <!--FOOTER-->
         <div class="myfooter">
@@ -89,7 +196,7 @@
 
                     <input type="text" />
 
-                    <button>اشتراك</button>
+                    <button class="mybutton">اشتراك</button>
 
 
                 </div>
@@ -206,7 +313,7 @@
             <div class="lastText">
                 <p>
 
-                    سياسة الخصوصية  | شروط الخدمة </p>
+                    سياسة الخصوصية | شروط الخدمة </p>
 
                 <p> .جميع الحقوق محفوظة لمكتبة جرير © 2022. س.ت. 1010032264. اونلاين س.ت. 1010654213
                 </p>
@@ -214,25 +321,88 @@
         </div>
         <!--END FOOTER-->
         <script>
-      // Modal Setup
-//   var modal = document.getElementById('modal');
+            // Get the modal
+            var modal = document.getElementsByClassName("modal");
 
-// var modalClose = document.getElementById('modal-close');
-// modalClose.addEventListener('click', function () {
-//   modal.style.display = "none";
-// });
+            // Get the button that opens the modal
+            var modal_btn = document.getElementsByClassName("myBtn");
 
- // global handler
-//  document.addEventListener('click', function (e) {
-//     if (e.target.className.indexOf('modal-target') !== -1) {
-//       var img = e.target;
-//       var modalImg = document.getElementById("modal-content");
-//       var captionText = document.getElementById("modal-caption");
-//       modal.style.display = "block";
-//       modalImg.src = img.src;
-//       captionText.innerHTML = img.alt;
-//     }
-//   });
+            // Get the <span> element that closes the modal
+            var span_close = document.getElementsByClassName("close");
+
+            // Get left and right arrows
+            var left = document.getElementsByClassName("left");
+            var right = document.getElementsByClassName("right");
+
+            // set data indexes on errrythang.
+            function setDataIndex() {
+                for (i = 0; i < modal_btn.length; i++) {
+                    modal_btn[i].setAttribute('data-index', i);
+                    modal[i].setAttribute('data-index', i);
+                    span_close[i].setAttribute('data-index', i);
+                    left[i].setAttribute('data-index', i);
+                    right[i].setAttribute('data-index', i);
+                }
+            }
+
+            //add onclicks to all the model buttons and display models when clicked
+            for (i = 0; i < modal_btn.length; i++) {
+                modal_btn[i].onclick = function () {
+                    var ElementIndex = this.getAttribute('data-index');
+                    modal[ElementIndex].style.display = "block";
+                    document.body.classList.add("noScroll");
+                };
+
+                // When the user clicks on <span> (x), close the modal
+                span_close[i].onclick = function () {
+                    var ElementIndex = this.getAttribute('data-index');
+                    modal[ElementIndex].style.display = "none";
+                    document.body.classList.remove("noScroll");
+                };
+
+                right[i].onclick = function () {
+                    var ElementIndex = this.getAttribute('data-index');
+                    var CurrentModal = parseInt(ElementIndex, 10);
+
+                    if (CurrentModal === modal_btn.length - 1) {
+                        var NextModal = 0;
+                    } else {
+                        var NextModal = CurrentModal + 1;
+                    }
+
+                    modal[CurrentModal].style.display = "none";
+                    modal[NextModal].style.display = "block";
+                };
+
+                left[i].onclick = function () {
+                    var ElementIndex = this.getAttribute('data-index');
+                    var CurrentModal = parseInt(ElementIndex, 10);
+
+                    if (CurrentModal === 0) {
+                        var PreviousModal = modal_btn.length - 1;
+                    } else {
+                        var PreviousModal = CurrentModal - 1;
+                    }
+
+                    modal[PreviousModal].style.display = "block";
+                    modal[CurrentModal].style.display = "none";
+                };
+            }
+
+
+            window.onload = function () {
+                setDataIndex();
+            };
+
+            // close the modal when you click outside the box
+            window.onclick = function (event) {
+                if (event.target === modal[event.target.getAttribute('data-index')]) {
+                    modal[event.target.getAttribute('data-index')].style.display = "none";
+                    document.body.classList.remove("noScroll");
+                }
+            };
+
+
         </script>
     </body>
 
