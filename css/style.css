@@ -286,7 +286,7 @@ border: 1px solid #e5e9f2;
 }
 .contact{
  
-    display: block ruby;
+    display: flex;
 }
 
 .form input {
