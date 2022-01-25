@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta -->
+    <!-- The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data. -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Categories</title>
+    <!-- link -->
+    <!-- tag defines the relationship between the current document and an external resource -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- logo -->
+
+        <div class="logo"></div>
+
+        <!--navigation menu -->
+        <ul class="nav-links">
+            <!-- checkbox hack-->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+
+            <div class="menu">
+                <li><span><img src="icons/person.svg" /> </span><a><button class="myBtn"> ادخل لحسابك </button>أو<button
+                            class="myBtn"> سجل الآن </button></a>
+                </li>
+                <li><span><img src="icons/star.svg" class="icons" /> </span><a href="/"> المفضلة </a></li>
+                <li><span><img src="icons/ship.svg" class="icons" /> </span><a href="/"> تتبع الشحنة </a></li>
+                <li><span><img src="icons/correct.svg" class="icons" /> </span><a href="/"> طلبات الصيانة </a></li>
+                <li><span><img src="icons/help.svg" class="icons" /> </span><a href="/"> المساعدة </a></li>
+                <li><span><img src="icons/map.svg" class="icons" /> </span><a href="/"> فروعنا </a></li>
+
+                <li><span><img src="icons/sudia.svg" class="icons" /> </span><a href="/"> المملكة العربية السعودية </a>
+                </li>
+                <li><a href="/"> English </a><span><img src="icons/translate.svg" class="icons" /> </span></li>
+
+            </div>
+
+
+        </ul>
+    </nav>
+    <nav class="Secondnavbar">
+
+        <div class="logo1">
+            <a href="index.html">
+                <img src="icons/cart.svg"  /> 
+                
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" />
+            <img src="icons/search.svg" class="searchicon" />
+        </div>
+
+        <div class="cart">
+            <img src="icons/cart.svg" />
+            
+       <div id="result" class="smnumber"></div>
+        </div>
+    </nav>
+
+
+  <!-- cover slide -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/advertisement1.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/advertisement2.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/advertisement3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/advertisement4.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+         <!-- The dots/square -->
+      <div class="small-square" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+    
+      
+     
+    
+    
+      <!-- end cover slide -->
+
+    <!-- start body -->
+ 
+
+<div class="myCategories">
+    
+    <div>
+     <article class="filter_category_card">
+       <div>
+        <div class="book-type2">
+            <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+            <h1 >كتاب إلكتروني</h1>
+        </div>
+        <div>
+            <p class="book-type2-p">تصفية النتائج</p>
+            <button class="accordion">علامة تجارية</button>
+<div class="panel">
+<ul >
+    <li>علامة تجارية 1</li>
+    <li>علامة تجارية 2</li>
+    <li>علامة تجارية3</li>
+</ul> 
+</div>
+
+<button class="accordion">السعر</button>
+<div class="panel">
+<input type="range" min="1" max="10"/>  
+</div>
+
+<button class="accordion">صيغة الكتاب</button>
+<div class="panel">
+    <ul >
+        <li>pdf</li>
+        <li>Word </li>
+    </ul> 
+</div>
+        </div>
+       </div>
+     </article>
+    </div>
+    <div>
+          <!-- cards -->
+          <section>
+            <div class="search">
+                <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="ابحث">
+              </div>
+            <div class="category" id="myProducts">
+               
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 1 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 2 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                  
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>3 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 4 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 5 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 6 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1> 7 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="images/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="book-type card-title">
+                        <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>8 كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                        <img src="icons/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                   
+                    <div class="action">
+                        <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
+                        <a href="#" ><button onclick="clickCounter()" type="button"> <img src="icons/cart.svg" alt="السلة" ></button></a>
+                        <a href="#" ><img src="icons/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </article>
+               
+            </div>
+        </section>
+
+<!-- end cards -->
+    </div>
+</div>
+
+        <!--FOOTER-->
+        <div class="myfooter">
+            <div class="">
+                <p>انضم إلى نشرتنا البريدية</p>
+                <div class="form">
+
+                    <input type="text" />
+
+                    <button class="mybutton">اشتراك</button>
+
+
+                </div>
+
+                <p class="social">تواصل معنا</p>
+                <ul class="contact">
+                    <li class="icons">
+                        <img src="icons/svgexport-55.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-56.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-57.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-58.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-59.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-61.svg" />
+                    </li>
+                    <li>
+                        <img src="icons/svgexport-56.svg" />
+                    </li>
+                </ul>
+
+            </div>
+            <div class="">
+                <p>خدمة العملاء</p>
+                <ul>
+                    <li> مبيعات الشركات </li>
+                    <li>الأسئلة المتكررة </li>
+                    <li> دليل التسوق والمطبوعات </li>
+                    <li>مواقع المعارض </li>
+                    <li>سياسة الضمان </li>
+                    <li> سياسة الاسترجاع والاستبدال </li>
+                    <li> اتصل بنا </li>
+                    <li> 920000089 </li>
+                </ul>
+
+            </div>
+
+            <div class="">
+                <p>خدمات جرير </p>
+                <ul>
+                    <li>تذاكر جرير </li>
+                    <li> خدمة تقسيط المشتريات </li>
+                    <li> خدمات ما بعد البيع </li>
+                    <li> خدمة الحماية الشاملة </li>
+                    <li> خدمة تمديد الضمان </li>
+                    <li> حماية أجهزة آبل </li>
+                    <li> بطاقة خصم جرير </li>
+                    <li> بطاقة جرير للهدايا </li>
+                </ul>
+
+            </div>
+
+            <div class="">
+                <p> روابط سريعة </p>
+                <ul>
+                    <li> إصدارات جرير </li>
+                    <li> قارئ جرير </li>
+                    <li> شركاء برامج المكافئات </li>
+                    <li>خدمات شركات الإتصالات </li>
+
+                </ul>
+
+            </div>
+
+            <div class="">
+                <p> عن جرير </p>
+                <ul>
+                    <li> من نحن </li>
+                    <li> الحوكمة </li>
+                    <li> علاقات المستثمرين والتقارير</li>
+                    <li> الاستدامة </li>
+                    <li>الأخبار</li>
+
+                </ul>
+                <p>فرص العمل </p>
+            </div>
+
+
+
+
+        </div>
+        <div class="makeflex">
+            <ul class="contact">
+                <li class="icons">
+                    <img src="icons/svgexport-62.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-63.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-64.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-65.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-66.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-67.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-67.svg" />
+                </li>
+            </ul>
+            <div class="lastText">
+                <p>
+
+                    سياسة الخصوصية | شروط الخدمة </p>
+
+                <p> .جميع الحقوق محفوظة لمكتبة جرير © 2022. س.ت. 1010032264. اونلاين س.ت. 1010654213
+                </p>
+            </div>
+        </div>
+        <!--END FOOTER-->
+
+    <!-- end body -->
+
+
+    <script src="js/javascript.js"></script>
+
+    </body>
+    </html>
