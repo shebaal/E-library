@@ -184,6 +184,7 @@
          <section>
             <header class="title">
                 <h1 class="topic">العروض الحالية</h1>
+                <div class="inner-box" id="day"></div>
             </header>
             <div class="category">
                
@@ -207,7 +208,8 @@
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
-                
+                    
+
                     <div class="action">
                         <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
                         <a href="#" ><img src="icons/cart.svg" alt="السلة" ></a>
@@ -1575,6 +1577,40 @@
                 }
             };
 
+
+
+// Set the date we're counting down to
+
+var countDownDate = new Date("Jan 30, 2022 00:00:00").getTime();
+var x = setInterval(function() {
+
+// Get today's date and time
+
+var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  document.getElementById('day').innerHTML = ' تبقى للعرض '+days + ' ايام ';
+
+  // If the count down is finished, write some text
+
+  if (distance < 0) {
+
+clearInterval(x);
+
+document.getElementById("demo").innerHTML = "Happy New Year";
+
+}
+
+
+
+}, 1000);
 
 
         </script>
