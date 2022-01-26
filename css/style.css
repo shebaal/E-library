@@ -63,6 +63,11 @@ a {
     border: none;
     background: none;
     }
+    .myBtn2{
+
+      border: none;
+      background: none;
+      }
     .imagesize
     {
       width: 50px;
@@ -599,8 +604,13 @@ border: 1px solid #9e1d22;
   .demo:hover {
     opacity: 1;
   }
+.f1{
+  flex:1;
+}
 
-
+.f2{
+  flex:2;
+}
   /* end details page */
 
 
@@ -902,8 +912,20 @@ background: none;
 
   /* APPLYING MEDIA QUERIES */
   @media (max-width:768px) {
-   
-  
+    .login {
+      width: 100%;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid #888;
+      width: 300px;
+  }
+    .signup {
+      width: 200px;
+    }
+    
     .menu{
       display:none;
     }

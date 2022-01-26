@@ -42,7 +42,7 @@
 
                 <li><span><img src="icons/sudia.svg" class="icons" /> </span><a href="/"> المملكة العربية السعودية </a>
                 </li>
-                <li ><input type="button" id="directionSwitch" class="myBtn" value="English"/><span><img src="icons/translate.svg" class="icons" /> </span></li>
+                <li ><input type="button" id="directionSwitch" class="myBtn2" value="English"/><span><img src="icons/translate.svg" class="icons" /> </span></li>
 
             </div>
 
@@ -184,6 +184,7 @@
          <section>
             <header class="title">
                 <h1 class="topic">العروض الحالية</h1>
+                <!-- <div class="inner-box" id="day"></div> -->
             </header>
             <div class="category">
                
@@ -192,6 +193,7 @@
                     <div class="book-type">
                         <img src="icons/type.svg" class="book-type__icon" alt="نوع الكتاب">
                         <h1>كتاب إلكتروني</h1>
+                        
                     </div>
                     <div class="rating">
                         <img src="icons/rating.svg" class="rating__star" alt="">
@@ -204,11 +206,13 @@
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
                     
-                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
+
+                    
+                <div class="inner-box" id="day"></div>
                     
 
                     <div class="action">
@@ -234,12 +238,12 @@
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
                     
-                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
                   
+                <div class="inner-box" id="day2"></div>
                     <div class="action">
                         <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
                         <a href="#" ><img src="icons/cart.svg" alt="السلة" ></a>
@@ -263,11 +267,13 @@
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
                     
-                <div class="inner-box" id="day"></div>
+                <!-- <div class="inner-box" id="day"></div> -->
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
+                    
+                <div class="inner-box" id="day3"></div>
                    
                     <div class="action">
                         <a href="#" ><img src="images/star.svg" alt="المفضلة" ></a>
@@ -292,11 +298,13 @@
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
                     
-                <div class="inner-box" id="day"></div>
+                <!-- <div class="inner-box" id="day"></div> -->
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
+                    
+                <div class="inner-box" id="day4"></div>
                    
                     <div class="action">
                         <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
@@ -321,12 +329,13 @@
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
                     
-                <div class="inner-box" id="day"></div>
+                <!-- <div class="inner-box" id="day"></div> -->
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
                     </div>
                    
+                <div class="inner-box" id="day5"></div>
                     <div class="action">
                         <a href="#" ><img src="icons/star.svg" alt="المفضلة" ></a>
                         <a href="#" ><img src="icons/cart.svg" alt="السلة" ></a>
@@ -1503,104 +1512,16 @@
         <script>
             
 
-// language
-document.getElementById('directionSwitch').addEventListener('click', function() {
-  var docDirection = document.documentElement.dir;  
-  var isRTL = (docDirection === 'rtl');
-  document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
-
-});
-            // Get the modal
-            var modal = document.getElementsByClassName("modal");
-
-            // Get the button that opens the modal
-            var modal_btn = document.getElementsByClassName("myBtn");
-
-            // Get the <span> element that closes the modal
-            var span_close = document.getElementsByClassName("close");
-
-            // Get left and right arrows
-            var left = document.getElementsByClassName("left");
-            var right = document.getElementsByClassName("right");
-
-            // set data indexes on errrythang.
-            function setDataIndex() {
-                for (i = 0; i < modal_btn.length; i++) {
-                    modal_btn[i].setAttribute('data-index', i);
-                    modal[i].setAttribute('data-index', i);
-                    span_close[i].setAttribute('data-index', i);
-                    left[i].setAttribute('data-index', i);
-                    right[i].setAttribute('data-index', i);
-                }
-            }
-
-            //add onclicks to all the model buttons and display models when clicked
-            for (i = 0; i < modal_btn.length; i++) {
-                modal_btn[i].onclick = function () {
-                    var ElementIndex = this.getAttribute('data-index');
-                    modal[ElementIndex].style.display = "block";
-                    document.body.classList.add("noScroll");
-                };
-
-                // When the user clicks on <span> (x), close the modal
-                span_close[i].onclick = function () {
-                    var ElementIndex = this.getAttribute('data-index');
-                    modal[ElementIndex].style.display = "none";
-                    document.body.classList.remove("noScroll");
-                };
-
-                right[i].onclick = function () {
-                    var ElementIndex = this.getAttribute('data-index');
-                    var CurrentModal = parseInt(ElementIndex, 10);
-
-                    if (CurrentModal === modal_btn.length - 1) {
-                        var NextModal = 0;
-                    } else {
-                        var NextModal = CurrentModal + 1;
-                    }
-
-                    modal[CurrentModal].style.display = "none";
-                    modal[NextModal].style.display = "block";
-                };
-
-                left[i].onclick = function () {
-                    var ElementIndex = this.getAttribute('data-index');
-                    var CurrentModal = parseInt(ElementIndex, 10);
-
-                    if (CurrentModal === 0) {
-                        var PreviousModal = modal_btn.length - 1;
-                    } else {
-                        var PreviousModal = CurrentModal - 1;
-                    }
-
-                    modal[PreviousModal].style.display = "block";
-                    modal[CurrentModal].style.display = "none";
-                };
-            }
-
-
-            window.onload = function () {
-                setDataIndex();
-            };
-
-            // close the modal when you click outside the box
-            window.onclick = function (event) {
-                if (event.target === modal[event.target.getAttribute('data-index')]) {
-                    modal[event.target.getAttribute('data-index')].style.display = "none";
-                    document.body.classList.remove("noScroll");
-                }
-            };
-
 
 
 // Set the date we're counting down to
 
-var countDownDate = new Date("Jan 30, 2022 00:00:00").getTime();
+var countDownDate = new Date("Jun 30, 2022").getTime();
 var x = setInterval(function() {
 
 // Get today's date and time
 
-var now = new Date().getTime();
+var now = new Date("Jun 27, 2022").getTime();
 
   // Find the distance between now and the count down date
 
@@ -1609,8 +1530,13 @@ var now = new Date().getTime();
   // Time calculations for days, hours, minutes and seconds
 
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  console.log(this.days,"ddddddddd");
 
   document.getElementById('day').innerHTML = ' تبقى للعرض '+days + ' ايام ';
+  document.getElementById('day2').innerHTML = ' تبقى للعرض '+days + ' ايام ';
+  document.getElementById('day3').innerHTML = ' تبقى للعرض '+days + ' ايام ';
+  document.getElementById('day4').innerHTML = ' تبقى للعرض '+days + ' ايام ';
+  document.getElementById('day5').innerHTML = ' تبقى للعرض '+days + ' ايام ';
 
   // If the count down is finished, write some text
 
@@ -1618,7 +1544,7 @@ var now = new Date().getTime();
 
 clearInterval(x);
 
-document.getElementById("demo").innerHTML = "Happy New Year";
+document.getElementById("demo").innerHTML = "offer end";
 
 }
 
@@ -1627,6 +1553,100 @@ document.getElementById("demo").innerHTML = "Happy New Year";
 }, 1000);
 
 
+// language
+document.getElementById('directionSwitch').addEventListener('click', function() {
+  var docDirection = document.documentElement.dir;  
+  var isRTL = (docDirection === 'rtl');
+  document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
+
+});
+          
+
+
+
+        </script>
+
+        <script>
+              // Get the modal
+              var modal = document.getElementsByClassName("modal");
+
+// Get the button that opens the modal
+var modal_btn = document.getElementsByClassName("myBtn");
+
+// Get the <span> element that closes the modal
+var span_close = document.getElementsByClassName("close");
+
+// Get left and right arrows
+var left = document.getElementsByClassName("left");
+var right = document.getElementsByClassName("right");
+
+// set data indexes on errrythang.
+function setDataIndex() {
+    for (i = 0; i < modal_btn.length; i++) {
+        modal_btn[i].setAttribute('data-index', i);
+        modal[i].setAttribute('data-index', i);
+        span_close[i].setAttribute('data-index', i);
+        left[i].setAttribute('data-index', i);
+        right[i].setAttribute('data-index', i);
+    }
+}
+
+//add onclicks to all the model buttons and display models when clicked
+for (i = 0; i < modal_btn.length; i++) {
+    modal_btn[i].onclick = function () {
+        var ElementIndex = this.getAttribute('data-index');
+        modal[ElementIndex].style.display = "block";
+        document.body.classList.add("noScroll");
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span_close[i].onclick = function () {
+        var ElementIndex = this.getAttribute('data-index');
+        modal[ElementIndex].style.display = "none";
+        document.body.classList.remove("noScroll");
+    };
+
+    right[i].onclick = function () {
+        var ElementIndex = this.getAttribute('data-index');
+        var CurrentModal = parseInt(ElementIndex, 10);
+
+        if (CurrentModal === modal_btn.length - 1) {
+            var NextModal = 0;
+        } else {
+            var NextModal = CurrentModal + 1;
+        }
+
+        modal[CurrentModal].style.display = "none";
+        modal[NextModal].style.display = "block";
+    };
+
+    left[i].onclick = function () {
+        var ElementIndex = this.getAttribute('data-index');
+        var CurrentModal = parseInt(ElementIndex, 10);
+
+        if (CurrentModal === 0) {
+            var PreviousModal = modal_btn.length - 1;
+        } else {
+            var PreviousModal = CurrentModal - 1;
+        }
+
+        modal[PreviousModal].style.display = "block";
+        modal[CurrentModal].style.display = "none";
+    };
+}
+
+
+window.onload = function () {
+    setDataIndex();
+};
+
+// close the modal when you click outside the box
+window.onclick = function (event) {
+    if (event.target === modal[event.target.getAttribute('data-index')]) {
+        modal[event.target.getAttribute('data-index')].style.display = "none";
+        document.body.classList.remove("noScroll");
+    }
+};
         </script>
     </body>
     </html>
