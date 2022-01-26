@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta -->
+    <!-- The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data. -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Categories</title>
+    <!-- link -->
+    <!-- tag defines the relationship between the current document and an external resource -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- logo -->
+
+        <div class="logo"></div>
+
+        <!--navigation menu -->
+        <ul class="nav-links">
+            <!-- checkbox hack-->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+
+            <div class="menu">
+                <li><span><img src="icons/person.svg" /> </span><a><button class="myBtn"> ادخل لحسابك </button>أو<button
+                            class="myBtn"> سجل الآن </button></a>
+                </li>
+                <li><span><img src="icons/star.svg" class="icons" /> </span><a href="/"> المفضلة </a></li>
+                <li><span><img src="icons/ship.svg" class="icons" /> </span><a href="/"> تتبع الشحنة </a></li>
+                <li><span><img src="icons/correct.svg" class="icons" /> </span><a href="/"> طلبات الصيانة </a></li>
+                <li><span><img src="icons/help.svg" class="icons" /> </span><a href="/"> المساعدة </a></li>
+                <li><span><img src="icons/map.svg" class="icons" /> </span><a href="/"> فروعنا </a></li>
+
+                <li><span><img src="icons/sudia.svg" class="icons" /> </span><a href="/"> المملكة العربية السعودية </a>
+                </li>
+                <li><a href="/"> English </a><span><img src="icons/translate.svg" class="icons" /> </span></li>
+
+            </div>
+
+
+        </ul>
+    </nav>
+    <nav class="Secondnavbar">
+
+        <div class="logo1">
+            <a href="index.html">
+                <img src="icons/cart.svg" />
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" />
+            <img src="icons/search.svg" class="searchicon" />
+        </div>
+
+        <div class="cart">
+            <img src="icons/cart.svg" />
+        </div>
+    </nav>
+
+
+    <!-- cover slide -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="images/advertisement1.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/advertisement2.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/advertisement3.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/advertisement4.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The dots/square -->
+        <div class="small-square" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- end cover slide -->
+
+
+
+    <!-- start body -->
+
+
+    <div class="category" style="align-items: start;">
+        <div>
+            <!-- Container for the image gallery -->
+          <img src="images/book1.jpg">
+        </div>
+        <div>
+            <div>
+                <h2>لانك الله (كتاب الكتروني)</h2>
+                <h3 class="tred">12.99ر.س</h3>
+                <h5 class="tgray">شامل الضريبة</h5>
+            </div>
+            <div>
+                <h5 class="tgray">Each:وحدة البيع</h5>
+                <div class="makeflex">
+
+                    <a class="tblue">(15 المراجعات)</a>
+                    <img src="icons/star.svg" />
+                    <img src="icons/star.svg" />
+                    <img src="icons/star.svg" />
+                    <img src="icons/star.svg" />
+                    <img src="icons/star.svg" />
+                </div>
+                <h4 class="tgray">4رقم المنتج5 رقم الصنف 6 </h4>
+            </div>
+
+          
+
+        </div>
+        
+        <div>
+
+            <div class="graybox">
+                <h4>ملاحظة</h4>
+                <h5>سيتم اضافة هذا الكتاب الالكتروني الى مكتبك</h5>
+                <div class="buy">
+                    <img src="icons/cart.svg" />
+                    <a class="twhite" href="confirm.html"> تاكيد الشراء </a>
+                </div>
+              
+            </div>
+
+          
+
+        </div>
+    </div>
+
+   
+
+     
+    <!-- end body -->
+
+
+    <!--FOOTER-->
+    <div class="myfooter">
+        <div class="">
+            <p>انضم إلى نشرتنا البريدية</p>
+            <div class="form">
+
+                <input type="text" />
+
+                <button class="mybutton">اشتراك</button>
+
+
+            </div>
+
+            <p class="social">تواصل معنا</p>
+            <ul class="contact">
+                <li class="icons">
+                    <img src="icons/svgexport-55.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-56.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-57.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-58.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-59.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-61.svg" />
+                </li>
+                <li>
+                    <img src="icons/svgexport-56.svg" />
+                </li>
+            </ul>
+
+        </div>
+        <div class="">
+            <p>خدمة العملاء</p>
+            <ul>
+                <li> مبيعات الشركات </li>
+                <li>الأسئلة المتكررة </li>
+                <li> دليل التسوق والمطبوعات </li>
+                <li>مواقع المعارض </li>
+                <li>سياسة الضمان </li>
+                <li> سياسة الاسترجاع والاستبدال </li>
+                <li> اتصل بنا </li>
+                <li> 920000089 </li>
+            </ul>
+
+        </div>
+
+        <div class="">
+            <p>خدمات جرير </p>
+            <ul>
+                <li>تذاكر جرير </li>
+                <li> خدمة تقسيط المشتريات </li>
+                <li> خدمات ما بعد البيع </li>
+                <li> خدمة الحماية الشاملة </li>
+                <li> خدمة تمديد الضمان </li>
+                <li> حماية أجهزة آبل </li>
+                <li> بطاقة خصم جرير </li>
+                <li> بطاقة جرير للهدايا </li>
+            </ul>
+
+        </div>
+
+        <div class="">
+            <p> روابط سريعة </p>
+            <ul>
+                <li> إصدارات جرير </li>
+                <li> قارئ جرير </li>
+                <li> شركاء برامج المكافئات </li>
+                <li>خدمات شركات الإتصالات </li>
+
+            </ul>
+
+        </div>
+
+        <div class="">
+            <p> عن جرير </p>
+            <ul>
+                <li> من نحن </li>
+                <li> الحوكمة </li>
+                <li> علاقات المستثمرين والتقارير</li>
+                <li> الاستدامة </li>
+                <li>الأخبار</li>
+
+            </ul>
+            <p>فرص العمل </p>
+        </div>
+
+
+
+
+    </div>
+    <div class="makeflex">
+        <ul class="contact">
+            <li class="icons">
+                <img src="icons/svgexport-62.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-63.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-64.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-65.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-66.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-67.svg" />
+            </li>
+            <li>
+                <img src="icons/svgexport-67.svg" />
+            </li>
+        </ul>
+        <div class="lastText">
+            <p>
+
+                سياسة الخصوصية | شروط الخدمة </p>
+
+            <p> .جميع الحقوق محفوظة لمكتبة جرير © 2022. س.ت. 1010032264. اونلاين س.ت. 1010654213
+            </p>
+        </div>
+    </div>
+    <!--END FOOTER-->
+
+    <!-- end body -->
+
+
+    <script src="js/javascript.js"></script>
+
+</body>
+
+</html>
