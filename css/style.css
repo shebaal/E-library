@@ -16,11 +16,12 @@
 
   @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap");
 
-*{
+body{
     padding: 0;
     margin: 0;
     direction:rtl;
 }
+
 a {
     text-decoration: none;
    }
@@ -62,6 +63,10 @@ a {
     border: none;
     background: none;
     }
+    .imagesize
+    {
+      width: 50px;
+    }
    /* end  */
    /* NAVBAR STYLING STARTS */
    .navbar {
@@ -73,6 +78,9 @@ border-bottom: 1px solid #e5e9f2;
     background-color:  var(--bg-color);
     color: var(--text-color);
    }
+   html[dir="rtl"] .navbar{
+    direction:ltr;
+  }
    .nav-links{
        margin-left:auto;
    }
@@ -161,6 +169,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+html[dir="rtl"] .Secondnavbar{
+  direction:ltr;
 }
 .logo1{
     width: 10%;
@@ -322,7 +333,9 @@ section{
     padding-left: 20px;
 padding-right: 20px;
 }
-
+html[dir="rtl"] section{
+  direction:ltr;
+}
 .title{
     padding: 15px 30px;
 }
@@ -771,7 +784,9 @@ overflow: hidden;
     direction: rtl;
     display: flex;
 }
-
+html[dir="rtl"] .myfooter{
+  direction:ltr;
+}
 .myfooter p {
     color: #a6a6a6;
     padding-bottom: 7px;
@@ -801,7 +816,7 @@ overflow: hidden;
 }
 .contact{
  
-    display: block ruby;
+    display:flex;
 }
 
 .form input {
@@ -925,6 +940,9 @@ background: none;
     align-items: center;
     justify-content: space-around;
 }
+html[dir="rtl"] .Secondnavbar{
+  direction:ltr;
+}
 .search input{
     
     background-color:var(--bg-color);
@@ -951,6 +969,9 @@ background: none;
     padding: 20px;
     direction: rtl;
     display: block;
+}
+html[dir="rtl"] .myfooter{
+  direction:ltr;
 }
 .makeflex{
     display: block;

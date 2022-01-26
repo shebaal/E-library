@@ -42,7 +42,7 @@
 
                 <li><span><img src="icons/sudia.svg" class="icons" /> </span><a href="/"> المملكة العربية السعودية </a>
                 </li>
-                <li><a href="/"> English </a><span><img src="icons/translate.svg" class="icons" /> </span></li>
+                <li ><input type="button" id="directionSwitch" class="myBtn" value="English"/><span><img src="icons/translate.svg" class="icons" /> </span></li>
 
             </div>
 
@@ -53,7 +53,7 @@
 
         <div class="logo1">
             <a href="index.html">
-                <img src="icons/cart.svg"  /> 
+                <img src="images/mylogo.png"  class="imagesize" /> 
             </a>
 
         </div>
@@ -184,7 +184,6 @@
          <section>
             <header class="title">
                 <h1 class="topic">العروض الحالية</h1>
-                <div class="inner-box" id="day"></div>
             </header>
             <div class="category">
                
@@ -204,6 +203,8 @@
                     <div class="book-title">
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
+                    
+                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
@@ -232,6 +233,8 @@
                     <div class="book-title">
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
+                    
+                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
@@ -259,6 +262,8 @@
                     <div class="book-title">
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
+                    
+                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
@@ -286,6 +291,8 @@
                     <div class="book-title">
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
+                    
+                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
@@ -313,6 +320,8 @@
                     <div class="book-title">
                         <h1><a href="details.html" class="book-title__item">كبريا وهوى (كتاب إلكتروني)</a></h1>
                     </div>
+                    
+                <div class="inner-box" id="day"></div>
                     <div class="book-price">
                         <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
                         <p class="book-price__tax">شامل الضرائب</p>
@@ -1494,8 +1503,13 @@
         <script>
             
 
+// language
+document.getElementById('directionSwitch').addEventListener('click', function() {
+  var docDirection = document.documentElement.dir;  
+  var isRTL = (docDirection === 'rtl');
+  document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
 
-
+});
             // Get the modal
             var modal = document.getElementsByClassName("modal");
 
